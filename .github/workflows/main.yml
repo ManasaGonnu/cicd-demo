@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-test:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +26,6 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t cicd-demo .
+
+      - name: Deployment
+        run: echo "Application deployed successfully!"
